@@ -22,7 +22,9 @@ const newItemEl = document.getElementById("input-field");
 const shoppingListEl = document.getElementById("shopping-list");
 
 function addToDataBase() {
-  push(shoppingListInDB, newItemEl.value);
+  if (newItemEl.value) {
+    push(shoppingListInDB, newItemEl.value);
+  }
   cleanTheInputField();
 }
 
